@@ -30,7 +30,6 @@ namespace Boilerplate.Application.Services
             {
                 new User() { Email = "romane.thu@gmail.com", Password = BC.HashPassword("Password123!"), Role = "User"},
             };
-
             var user = store.Find(i => i.Email == email);
            
             if (user == null || !BC.Verify(password, user.Password))
