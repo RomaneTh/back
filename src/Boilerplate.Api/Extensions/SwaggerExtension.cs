@@ -19,19 +19,9 @@ namespace Boilerplate.Api.Extensions
                 c.SwaggerDoc("v1",
                     new OpenApiInfo
                     {
-                        Title = "Boilerplate.Api",
+                        Title = "Login.Api",
                         Version = "v1",
-                        Description = "API Boilerplate",
-                        Contact = new OpenApiContact
-                        {
-                            Name = "Yan Pitangui",
-                            Url = new Uri("https://github.com/yanpitangui")
-                        },
-                        License = new OpenApiLicense
-                        {
-                            Name = "MIT",
-                            Url = new Uri("https://github.com/yanpitangui/dotnet-api-boilerplate/blob/main/LICENSE")
-                        }
+                        Description = "API Spimed"
                     });
                 c.DescribeAllParametersInCamelCase();
                 c.OrderActionsBy(x => x.RelativePath);

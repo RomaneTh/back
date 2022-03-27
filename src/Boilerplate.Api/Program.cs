@@ -22,8 +22,8 @@ namespace Boilerplate.Api
             try
             {
                 Log.Logger.Information("Application starting up...");
-                var dbContext = services.GetRequiredService<ApplicationDbContext>();
-                if (dbContext.Database.IsSqlServer()) await dbContext.Database.MigrateAsync();
+                // var dbContext = services.GetRequiredService<ApplicationDbContext>();
+                // if (dbContext.Database.IsSqlServer()) await dbContext.Database.MigrateAsync();
 
                 await host.RunAsync();
             }

@@ -15,21 +15,21 @@ namespace Boilerplate.Api.IntegrationTests
             Factory = new WebApplicationFactory<Startup>().BuildApplicationFactory();
         }
 
-        protected virtual void Dispose(bool disposing)
-        {
-            if (disposing)
-            {
-                using var _scope = (Factory.Services.GetRequiredService<IServiceScopeFactory>()).CreateScope();
-                using var _context = _scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
-                _context?.Database.EnsureDeleted();
-                Factory.Dispose();
-            }
-        }
+        // protected virtual void Dispose(bool disposing)
+        // {
+        //     if (disposing)
+        //     {
+        //         using var _scope = (Factory.Services.GetRequiredService<IServiceScopeFactory>()).CreateScope();
+        //         using var _context = _scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+        //         _context?.Database.EnsureDeleted();
+        //         Factory.Dispose();
+        //     }
+        // }
 
-        public void Dispose()
-        {
-            Dispose(true);
-            GC.SuppressFinalize(this);
-        }
+        // public void Dispose()
+        // {
+        //     Dispose(true);
+        //     GC.SuppressFinalize(this);
+        // }
     }
 }

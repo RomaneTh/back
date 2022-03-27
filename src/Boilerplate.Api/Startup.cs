@@ -4,8 +4,6 @@ using Boilerplate.Api.Extensions;
 using Boilerplate.Application.DTOs;
 using Boilerplate.Application.Interfaces;
 using Boilerplate.Application.Services;
-using Boilerplate.Domain.Repositories;
-using Boilerplate.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -15,6 +13,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using Boilerplate.Application.Auth;
 using Boilerplate.Domain.Auth.Interfaces;
+// using System.Text.Json;
+// using System.Text.Json.Serialization;
 
 namespace Boilerplate.Api
 {
@@ -32,24 +32,13 @@ namespace Boilerplate.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //Extension method for less clutter in startup
-            services.AddApplicationDbContext(Configuration);
-
             //DI Services and Repos
-            services.AddScoped<IHeroRepository, HeroRepository>();
-            services.AddScoped<IHeroService, HeroService>();
-            services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<ISession, Session>();
 
             // WebApi Configuration
-            services.AddControllers().AddJsonOptions(options =>
-            {
-                options.JsonSerializerOptions.IgnoreNullValues = true;
-                options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()); // for enum as strings
-            });
-
+            services.AddControllers();
 
             var tokenConfig = Configuration.GetSection("TokenConfiguration");
             services.Configure<TokenConfiguration>(tokenConfig);

@@ -422,9 +422,9 @@ namespace Boilerplate.Api.IntegrationTests
         #endregion
 
 
-        public Task DisposeAsync()
-        {
-            return Task.CompletedTask;
-        }
+        // public Task DisposeAsync()
+        // {
+        //     return Task.CompletedTask;
+        // }
     }
 }

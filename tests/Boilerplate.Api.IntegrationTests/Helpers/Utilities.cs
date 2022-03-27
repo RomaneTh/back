@@ -15,14 +15,14 @@ namespace Boilerplate.Api.IntegrationTests.Helpers
 {
     public static class Utilities
     {
-        public static void InitializeDbForTests(ApplicationDbContext db)
-        {
-            db.Users.RemoveRange(db.Users);
-            db.Heroes.RemoveRange(db.Heroes);
-            db.Heroes.AddRange(GetSeedingHeroes());
-            db.Users.AddRange(GetSeedingUsers());
-            db.SaveChanges();
-        }
+        // public static void InitializeDbForTests(ApplicationDbContext db)
+        // {
+        //     db.Users.RemoveRange(db.Users);
+        //     db.Heroes.RemoveRange(db.Heroes);
+        //     db.Heroes.AddRange(GetSeedingHeroes());
+        //     db.Users.AddRange(GetSeedingUsers());
+        //     db.SaveChanges();
+        // }
 
         public static User[] GetSeedingUsers()
         {
@@ -45,12 +45,12 @@ namespace Boilerplate.Api.IntegrationTests.Helpers
             };
         }
 
-        public static void ReinitializeDbForTests(ApplicationDbContext db)
-        {
-            db.Heroes.RemoveRange(db.Heroes.ToList());
-            db.Users.RemoveRange(db.Users.ToList());
-            InitializeDbForTests(db);
-        }
+        // public static void ReinitializeDbForTests(ApplicationDbContext db)
+        // {
+        //     db.Heroes.RemoveRange(db.Heroes.ToList());
+        //     db.Users.RemoveRange(db.Users.ToList());
+        //     InitializeDbForTests(db);
+        // }
 
         public static List<Hero> GetSeedingHeroes()
         {

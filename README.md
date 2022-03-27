@@ -53,7 +53,6 @@ After that, you can pass the jwt on the lock (if using swagger) or via the Autho
 - SwaggerUI
 - EntityFramework
 - AutoMapper
-- Generic repository (to easily bootstrap a CRUD repository)
 - Serilog with request logging and easily configurable sinks
 - .Net Dependency Injection
 - Resource filtering
