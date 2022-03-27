@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using System.Text.Json;
 using AutoMapper;
 using Boilerplate.Application.DTOs;
 using Boilerplate.Application.DTOs.User;
@@ -31,12 +32,19 @@ namespace Boilerplate.Application.Services
             await Task.Delay(1);
 
             var allUsers = _userRepository.GetAll();
+
             var user = allUsers.Find(i => i.Email == email && i.Password == password);
 
             if (user == null)
             {
                 return null;
             }
+
+            // to move in update password : modify the user then re-serialize and savve in json file
+            var json = JsonSerializer.Serialize(allUsers);
+            Console.WriteLine(json);
+            //
+            
             return user;
         }
 

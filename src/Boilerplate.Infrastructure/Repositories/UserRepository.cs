@@ -16,13 +16,11 @@ namespace Boilerplate.Infrastructure.Repositories
         public List<UserEntity> GetAll()
         {
             var text = System.IO.File.ReadAllText("../Boilerplate.Infrastructure/Repositories/datastore2.json");
-            // Console.WriteLine(text);
 
-            var jObject = JObject.Parse(text);
-            JArray jArray= (JArray)jObject["users"];
+            var jObject = JArray.Parse(text);
             var userList = new List<UserEntity>();
 
-            foreach (JObject item in jArray) // <-- Note that here we used JObject instead of usual JProperty
+            foreach (JObject item in jObject)
             {
                 var data = new UserEntity
                 {
