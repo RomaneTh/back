@@ -75,8 +75,6 @@ namespace Boilerplate.Api
 
             // Swagger settings
             services.AddApiDoc();
-            // GZip compression
-            services.AddCompression();
 
         }
 
@@ -100,9 +98,6 @@ namespace Boilerplate.Api
 
 
             app.UseHttpsRedirection();
-
-
-            app.UseResponseCompression();
         }
     }
 }
