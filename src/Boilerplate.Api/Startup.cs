@@ -4,6 +4,8 @@ using Boilerplate.Api.Extensions;
 using Boilerplate.Application.DTOs;
 using Boilerplate.Application.Interfaces;
 using Boilerplate.Application.Services;
+using Boilerplate.Domain.Repositories;
+using Boilerplate.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -33,6 +35,7 @@ namespace Boilerplate.Api
         public void ConfigureServices(IServiceCollection services)
         {
             //DI Services and Repos
+            services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<ISession, Session>();

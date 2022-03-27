@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "Email": "romane.thu@gmail.com",
+      "Password": "Password123!",
+      "Role": "User"
+    },
+    {
+      "Email": "example@gmail.com",
+      "Password": "Password123!",
+      "Role": "User"
+    },
+    {
+      "Email": "example2@gmail.com",
+      "Password": "Password123!",
+      "Role": "User"
+    }
+  ]
+}

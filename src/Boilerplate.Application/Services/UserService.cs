@@ -9,6 +9,7 @@ using Boilerplate.Application.Filters;
 using Boilerplate.Application.Interfaces;
 using Boilerplate.Domain.Auth;
 using Boilerplate.Domain.Entities;
+using Boilerplate.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 using BC = BCrypt.Net.BCrypt;
 
@@ -16,23 +17,23 @@ namespace Boilerplate.Application.Services
 {
     public class UserService : IUserService
     {
+        private readonly IUserRepository _userRepository;
         private readonly IMapper _mapper;
 
-        public UserService(IMapper mapper)
+        public UserService(IUserRepository userRepository, IMapper mapper)
         {
+            _userRepository = userRepository;
             _mapper = mapper;
         }        
 
         public async Task<User> Authenticate(string email, string password)
         {
             await Task.Delay(1);
-            var store = new List<User>
-            {
-                new User() { Email = "romane.thu@gmail.com", Password = BC.HashPassword("Password123!"), Role = "User"},
-            };
-            var user = store.Find(i => i.Email == email);
-           
-            if (user == null || !BC.Verify(password, user.Password))
+
+            var allUsers = _userRepository.GetAll();
+            var user = allUsers.Find(i => i.Email == email && i.Password == password);
+
+            if (user == null)
             {
                 return null;
             }
