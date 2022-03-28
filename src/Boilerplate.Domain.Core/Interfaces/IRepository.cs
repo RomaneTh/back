@@ -13,7 +13,7 @@ namespace Boilerplate.Domain.Core.Interfaces
 
         // TEntity Create(TEntity entity);
 
-        // TEntity Update(TEntity entity);
+        TEntity Update(TEntity entity);
 
         // Task Delete(Guid id);
 

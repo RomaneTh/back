@@ -21,7 +21,7 @@ using ISession = Boilerplate.Domain.Auth.Interfaces.ISession;
 namespace Boilerplate.Api.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/user")]
     [Authorize]
     public class UserController : ControllerBase
     {
@@ -57,7 +57,12 @@ namespace Boilerplate.Api.Controllers
             return Ok(_authService.GenerateToken(user));
         }
 
-        [HttpPatch("updatePassword")]
+        /// <summary>
+        /// User authenticated with JWT can update password
+        /// </summary>
+        /// <param name="dto">New password (complex password between 8 and 20 char)</param>
+        /// <returns>No content</returns>
+        [HttpPatch("update-password")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<ActionResult> UpdatePassword([FromBody] UpdatePasswordDto dto)
         {            
