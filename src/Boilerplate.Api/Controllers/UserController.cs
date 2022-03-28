@@ -17,6 +17,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ISession = Boilerplate.Domain.Auth.Interfaces.ISession;
+using Microsoft.AspNetCore.Cors;
 
 namespace Boilerplate.Api.Controllers
 {
@@ -41,6 +42,7 @@ namespace Boilerplate.Api.Controllers
         /// </summary>
         /// <param name="loginInfo">Email and password information</param>
         /// <returns>Token information</returns>
+        [EnableCors]
         [HttpPost]
         [Route("authenticate")]
         [AllowAnonymous]
@@ -62,6 +64,7 @@ namespace Boilerplate.Api.Controllers
         /// </summary>
         /// <param name="dto">New password (complex password between 8 and 20 char)</param>
         /// <returns>No content</returns>
+        [EnableCors]
         [HttpPatch("update-password")]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<ActionResult> UpdatePassword([FromBody] UpdatePasswordDto dto)
