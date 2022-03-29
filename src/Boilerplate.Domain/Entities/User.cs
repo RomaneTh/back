@@ -9,9 +9,6 @@ namespace Boilerplate.Domain.Entities
 
         [Required]
         public string Password { get; set; }
-
-        [Required]
-        public string Role { get; set; }
     }
 }
 

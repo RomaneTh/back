@@ -3,8 +3,6 @@ using System;
 using System.Threading.Tasks;
 using Boilerplate.Application.DTOs;
 using Boilerplate.Application.DTOs.User;
-using Boilerplate.Application.Filters;
-
 
 namespace Boilerplate.Application.Interfaces
 {

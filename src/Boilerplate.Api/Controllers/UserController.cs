@@ -10,7 +10,6 @@ using Boilerplate.Application.DTOs.Auth;
 using Boilerplate.Application.DTOs.User;
 using UserEntity = Boilerplate.Domain.Entities.User;
 using Newtonsoft.Json.Linq;
-using Boilerplate.Application.Filters;
 using Boilerplate.Application.Interfaces;
 using Boilerplate.Domain.Auth;
 using Microsoft.AspNetCore.Authorization;

@@ -27,7 +27,6 @@ namespace Boilerplate.Infrastructure.Repositories
                     Id = new System.Guid(item.GetValue("Id").ToString()),
                     Email = item.GetValue("Email").ToString(),
                     Password = item.GetValue("Password").ToString(),
-                    Role = item.GetValue("Role").ToString()
                 };
                 userList.Add(data);
             }

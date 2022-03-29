@@ -1,19 +1,6 @@
-# back
+# api-back
 
-# dotnet-api-boilerplate
-<p align="center">
-  <span>English</span> |
-  <a href="https://github.com/yanpitangui/dotnet-api-boilerplate/tree/main/translations/pt-br/README.md">Português</a>
-</p>
-
-A ``.Net 6.0`` WebApi boilerplate / template project. Repositories, Swagger, Mapper, Serilog and more implemented. 
-
-[![Build](https://github.com/yanpitangui/dotnet-api-boilerplate/actions/workflows/build.yml/badge.svg)](https://github.com/yanpitangui/dotnet-api-boilerplate/actions/workflows/build.yml)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=yanpitangui_dotnet-api-boilerplate&metric=coverage)](https://sonarcloud.io/dashboard?id=yanpitangui_dotnet-api-boilerplate)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=yanpitangui_dotnet-api-boilerplate&metric=alert_status)](https://sonarcloud.io/dashboard?id=yanpitangui_dotnet-api-boilerplate)
-
-The goal of this project is to be a kickstart to your .Net WebApi, implementing the most common used patterns
-and technologies for a restful API in .net, making your work easier.
+A ``.Net 6.0`` WebApi. Repositories, Swagger, Mapper, Serilog and fake database.
 
 # How to run
 - Download the .Net SDK 6
@@ -48,16 +35,8 @@ If you are using Visual Studio, you can also acess the Test Menu and open the Te
 - AutoMapper
 - Serilog with request logging and easily configurable sinks
 - .Net Dependency Injection
-- Resource filtering
-- Response compression
-- Response pagination
-- CI (Github Actions)
 - Authentication
-- Authorization
-- Unit tests
-- Integration tests with Fixtures
 - Container support with [docker](src/Boilerplate.Api/dockerfile) and [docker-compose](docker-compose.yml)
-
 
 # Project Structure
 1. Services
@@ -90,4 +69,4 @@ If you are using Visual Studio, you can also acess the Test Menu and open the Te
 2. This command will set the entrypoint for the migration (the responsible to selecting the dbprovider { sqlserver, mysql, etc } and the connection string) and the selected project will be "Boilerplate.Infrastructure", which is where the dbcontext is.
 
 # About
-This project was inspired from a boilerplate/template, developed by Yan Pitangui under [MIT license](LICENSE).
+This project was created with a boilerplate/template, developed by Yan Pitangui under [MIT license](LICENSE).
