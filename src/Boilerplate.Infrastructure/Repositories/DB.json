@@ -6,13 +6,13 @@
     "Id": "00000000-0000-0000-0000-000000000001"
   },
   {
-    "Email": "example@gmail.com",
+    "Email": "example2@gmail.com",
     "Password": "Password123!",
     "Role": "User",
     "Id": "00000000-0000-0000-0000-000000000002"
   },
   {
-    "Email": "example2@gmail.com",
+    "Email": "example3@gmail.com",
     "Password": "Password123!",
     "Role": "User",
     "Id": "00000000-0000-0000-0000-000000000003"
