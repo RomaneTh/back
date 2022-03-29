@@ -4,7 +4,7 @@ A ``.Net 6.0`` WebApi. Repositories, Swagger, Mapper, Serilog and fake database.
 
 # How to run
 - Download the .Net SDK 6
-- On the root directory, run ``docker-compose up -d``
+- On the root directory, run ``docker-compose up -d --build``
 - Go to src/Boilerplate.Api folder (``cd src/Boilerplate.Api``) and run ``dotnet run``
 - App is accessible athttp://localhost:5000
 - Visit http://localhost:5000/api-docs to access the application's swagger
