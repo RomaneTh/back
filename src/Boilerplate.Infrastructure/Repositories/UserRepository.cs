@@ -1,6 +1,5 @@
 ﻿using Boilerplate.Domain.Entities;
 using Boilerplate.Domain.Repositories;
-using Boilerplate.Infrastructure.Context;
 using UserEntity = Boilerplate.Domain.Entities.User;
 using System.Collections.Generic;
 using Newtonsoft.Json.Linq;

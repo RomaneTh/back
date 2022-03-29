@@ -1,7 +1,6 @@
 using System;
 using System.Threading.Tasks;
 using Boilerplate.Api.Extensions;
-using Boilerplate.Infrastructure.Context;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
