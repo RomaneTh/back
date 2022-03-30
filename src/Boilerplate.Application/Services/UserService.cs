@@ -10,7 +10,7 @@ using Boilerplate.Domain.Auth;
 using Boilerplate.Domain.Entities;
 using Boilerplate.Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
-// using BC = BCrypt.Net.BCrypt;
+using BC = BCrypt.Net.BCrypt;
 
 namespace Boilerplate.Application.Services
 {
@@ -30,9 +30,11 @@ namespace Boilerplate.Application.Services
             await Task.Delay(1);
 
             var allUsers = _userRepository.GetAll();
-            var user = allUsers.Find(i => i.Email == email && i.Password == password);
+            var user = allUsers.Find(i => i.Email == email);
 
-            if (user == null) return null;
+            if (user == null || !BC.Verify(password, user.Password)){
+                return null;  
+            } 
 
             return user;
         }
@@ -46,7 +48,7 @@ namespace Boilerplate.Application.Services
 
             if (originalUser == null) return null;
 
-            originalUser.Password = dto.Password;
+            originalUser.Password = BC.HashPassword(dto.Password);
             _userRepository.Update(originalUser);
 
             return _mapper.Map<GetUserDto>(originalUser);
