@@ -6,18 +6,21 @@ A ``.Net 6.0`` WebApi. Repositories, Swagger, Mapper, Serilog and fake database.
 - Download the .Net SDK 6
 - On the root directory, run ``docker-compose up -d --build``
 - Go to src/Boilerplate.Api folder (``cd src/Boilerplate.Api``) and run ``dotnet run``
-- App is accessible athttp://localhost:5000
+- Api is accessible at http://localhost:5000
 - Visit http://localhost:5000/api-docs to access the application's swagger
 
 # Authentication
 In this project, some routes requires authentication/authorization. For that, you will have to use the ``api/user/authenticate`` route to obtain the JWT.
 As default, you have three users, modifiable in DB.json
+
 1. 
 	- email: romane.thu@gmail.com
 	- password: Password123!
+
 2. 
 	- email: example2@gmail.com
 	- password: Password123!
+
 3. 
 	- email: example3@gmail.com
 	- password: Password123!
@@ -25,10 +28,6 @@ As default, you have three users, modifiable in DB.json
 After that, you can pass JWT via the Authorization header on a http request.
 
 Connected with a JWT, you can modify your password using the ``api/user/update-password`` route.
-
-## Running tests
-In the root folder, run ``dotnet test``. This command will try to find all test projects associated with the sln file.
-If you are using Visual Studio, you can also acess the Test Menu and open the Test Explorer, where you can see all tests and run all of them or one specifically. 
 
 # This project contains:
 - SwaggerUI
