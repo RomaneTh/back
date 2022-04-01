@@ -1,0 +1,17 @@
+[
+  {
+    "Email": "romane.thu@gmail.com",
+    "Password": "$2a$11$LWNUOhyS9LKNRm0hj8rDROev9YH73h3vjjkBMjXmSz/KJZ7yYJP8m",
+    "Id": "00000000-0000-0000-0000-000000000001"
+  },
+  {
+    "Email": "example2@gmail.com",
+    "Password": "$2a$11$LWNUOhyS9LKNRm0hj8rDROev9YH73h3vjjkBMjXmSz/KJZ7yYJP8m",
+    "Id": "00000000-0000-0000-0000-000000000002"
+  },
+  {
+    "Email": "example3@gmail.com",
+    "Password": "$2a$11$LWNUOhyS9LKNRm0hj8rDROev9YH73h3vjjkBMjXmSz/KJZ7yYJP8m",
+    "Id": "00000000-0000-0000-0000-000000000003"
+  }
+]
