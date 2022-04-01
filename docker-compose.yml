@@ -2,7 +2,6 @@ version: "3.6"
 networks:
   localdev:
     name: localdev
-    # driver: bridge
 
 services:    
   boilerplate-api:
