@@ -61,11 +61,5 @@ Connected with a JWT, you can modify your password using the ``api/user/update-p
 	1. Boilerplate.Infrastructure
 		- This project contains the database in json format, and the User repository accessing and modifying the database
 
-# Migrations
-1. To run migrations on this project, run the following command on the root folder: 
-	- ``dotnet ef migrations add InitialCreate --startup-project .\src\Boilerplate.Api\ --project .\src\Boilerplate.Infrastructure\``
-
-2. This command will set the entrypoint for the migration (the responsible to selecting the dbprovider { sqlserver, mysql, etc } and the connection string) and the selected project will be "Boilerplate.Infrastructure", which is where the dbcontext is.
-
 # About
-This project was created with a boilerplate/template, developed by Yan Pitangui under [MIT license](LICENSE).
+This project was created with a boilerplate/template, developed by Yan Pitangui.
